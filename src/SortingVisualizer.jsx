@@ -10,7 +10,7 @@ class SortingVisualizer extends Component {
         super();
         this.state={
             array: [],
-            bgColor:""
+            bgColor:"",
         }
     }
      componentDidMount(){
@@ -206,7 +206,7 @@ function randomIntFromInterval(min,max){
     //min and max included
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-function arrayAreEqual(sorted,jsorted){
+/* function arrayAreEqual(sorted,jsorted){
     if(sorted.length!==jsorted.length){
         console.log('length');
         return false;
@@ -220,6 +220,6 @@ function arrayAreEqual(sorted,jsorted){
         j++;
     }
     return true;
-}
+} */
  
 export default SortingVisualizer;
