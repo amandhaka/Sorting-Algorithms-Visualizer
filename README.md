@@ -1,3 +1,17 @@
+# Sorting Algorithms Visualizer
+
+This is a **Sorting Algorithms Visualizer**. I built this using reactjs. Here, You can visualise some of the most famouse sorting algorthims which are as follows:
+1. *Merge Sort*
+2. *Quick Sort*
+3. *Insertion Sort*
+4. *Selection Sort*
+5. *Bubble Sort* 
+
+You can see how all these algorithms really work and sort an array.
+Also, Thanks to @clementmishailescu for this amazing idea.
+
+Stuff after this line is added by github by default.Thanks.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -18,7 +32,7 @@ Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
-
+ 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
