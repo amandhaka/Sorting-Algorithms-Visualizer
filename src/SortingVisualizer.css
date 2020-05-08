@@ -1,0 +1,19 @@
+.array-container{
+    position: absolute;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 21px 16px 58px -6px rgba(148,142,148,0.74);
+    width:93vw;
+    left:50px;
+    height:94vh;
+    background: rgb(195,255,243);
+    background: linear-gradient(90deg, rgba(195,255,243,1) 19%, rgba(75,195,219,1) 100%);
+}
+.array-bar{
+    width: 3.5px;
+    display:inline-block;
+    margin:0px 1px;
+}
+#body{
+    background-color: black;
+}
