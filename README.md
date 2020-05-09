@@ -13,7 +13,7 @@ You can check out the app here [Sorting Algorithm Visualizer](https://amandhaka.
 
 Also, Thanks to @clementmishailescu for this amazing idea.
 
-![ ](sorting.gif)
+![Demo](Sorting.gif)
 
 Stuff after this line is added by github by default.Thanks.
 
