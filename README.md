@@ -15,7 +15,7 @@ Also, Thanks to @clementmishailescu for this amazing idea.
 
 ![Demo](Sorting.gif)
 
-Stuff after this line is added by github by default.Thanks.
+Stuff after this line is added by Create React App by default.Thanks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
