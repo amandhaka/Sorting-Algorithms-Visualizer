@@ -208,19 +208,19 @@ function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 // Testing the algorithms
-// function arrayAreEqual(sorted,jsorted){
-//     if(sorted.length!==jsorted.length){
-//         return false;
-//     };
-//     let i=0;
-//     let j=0;
-//     while(i<sorted.length && j<jsorted.length){
-//         if(sorted[i]!==jsorted[j])
-//         return false;
-//         i++;
-//         j++;
-//     }
-//     return true;
-// } 
+function arrayAreEqual(sorted,jsorted){
+    if(sorted.length!==jsorted.length){
+        return false;
+    };
+    let i=0;
+    let j=0;
+    while(i<sorted.length && j<jsorted.length){
+        if(sorted[i]!==jsorted[j])
+        return false;
+        i++;
+        j++;
+    }
+    return true;
+} 
  
 export default SortingVisualizer;

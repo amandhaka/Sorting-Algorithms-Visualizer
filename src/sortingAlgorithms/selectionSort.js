@@ -20,3 +20,4 @@ function swap(minidx,i,array){
     array[i]=array[minidx];
     array[minidx]=temp;
 }
+//console.log(animations)

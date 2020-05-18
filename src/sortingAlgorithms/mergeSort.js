@@ -3,6 +3,7 @@ export function mergeSort(array){
     const helper=[];
     if(array.length<=1) return array;
     const auxiliaryArray=array.slice();
+    //console.log(auxiliaryArray)
     mergeSortHelper(0,array.length-1,auxiliaryArray,helper,animations);
     return animations;
 }
