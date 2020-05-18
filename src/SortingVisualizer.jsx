@@ -27,14 +27,14 @@ class SortingVisualizer extends Component {
      selectionSort(){
          const animations=selectionSort(this.state.array);
          for(let i=0;i<animations.length;i++){
-             const colorChange=(animations[i][0]==="comparison1" || animations[i][0]==="comparison2");
+             const colorChange=(animations[i][0]==="compare1" || animations[i][0]==="compare2");
              const arrayBars=document.getElementsByClassName('array-bar');
              if(colorChange){
                  const [temp,barOne,barTwo]=animations[i];
                  setTimeout(()=>{
                     const barOneStyle=arrayBars[barOne].style;
                     const barTwoStyle=arrayBars[barTwo].style;
-                    const color=(temp==="comparison1")?'red':'#3498DB';
+                    const color=(temp==="compare1")?'red':'#3498DB';
                      barOneStyle.background=color;
                      barTwoStyle.background=color;
                  },i*5);
@@ -49,10 +49,11 @@ class SortingVisualizer extends Component {
          }
      }
      mergeSort(){
-         //const sorted=mergeSort(this.state.array);
-         //const jsorted=this.state.array.sort(function(a,b){return a-b});
-         //console.log(arrayAreEqual(sorted,jsorted));
-         const animations=mergeSort(this.state.array);
+        // const sorted=mergeSort(this.state.array);
+        // const jsorted=this.state.array.sort(function(a,b){return a-b});
+        // console.log(arrayAreEqual(sorted,jsorted));
+        const animations=mergeSort(this.state.array);
+        //console.log(animations);
          for(let i=0;i<animations.length;i++){
              const arrayBars= document.getElementsByClassName('array-bar');
              const colorChange=i%3!==2;
@@ -64,14 +65,14 @@ class SortingVisualizer extends Component {
                  setTimeout(()=>{
                     barOneStyle.background=color;
                     barTwoStyle.backgroud=color;
-                 },i*2);
+                 },i*3.5);
              }
              else{
                  setTimeout(()=>{
                     const[barOne,newHeight]=animations[i];
                     const barOneStyle=arrayBars[barOne].style;
                     barOneStyle.height=newHeight+'px';
-                 },i*2)
+                 },i*3.5)
              }
          }
     }
@@ -206,21 +207,19 @@ function randomIntFromInterval(min,max){
     //min and max included
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-/* For Testing Purpose
-function arrayAreEqual(sorted,jsorted){
-    if(sorted.length!==jsorted.length){
-        console.log('length');
-        return false;
-    };
-    let i=0;
-    let j=0;
-    while(i<sorted.length && j<jsorted.length){
-        if(sorted[i]!==jsorted[j])
-        return false;
-        i++;
-        j++;
-    }
-    return true;
-} */
+// function arrayAreEqual(sorted,jsorted){
+//     if(sorted.length!==jsorted.length){
+//         return false;
+//     };
+//     let i=0;
+//     let j=0;
+//     while(i<sorted.length && j<jsorted.length){
+//         if(sorted[i]!==jsorted[j])
+//         return false;
+//         i++;
+//         j++;
+//     }
+//     return true;
+// } 
  
 export default SortingVisualizer;

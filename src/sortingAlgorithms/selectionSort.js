@@ -3,14 +3,14 @@ export function selectionSort(array){
     for(let i=0;i<array.length-1;i++){
         let minidx=i;
         for(let j=i+1;j<array.length;j++){
-            animations.push(["comparison1",minidx,j]);
-            animations.push(["comparison2",minidx,j]);
+            animations.push(["compare1",minidx,j]);
+            animations.push(["compare2",minidx,j]);
             if(array[minidx]>array[j]){
                 minidx=j;
             }
         }
-        animations.push(["overwrite",minidx,array[i]]);
-        animations.push(["overwrite",i,array[minidx]]);
+        animations.push(["swap",minidx,array[i]]);
+        animations.push(["swap",i,array[minidx]]);
         swap(minidx,i,array);
     }
     return animations;
