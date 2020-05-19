@@ -13,7 +13,7 @@ export function selectionSort(array){
         animations.push(["swap",i,array[minidx]]);
         swap(minidx,i,array);
     }
-    return animations;
+    return [animations,array];
 }
 function swap(minidx,i,array){
     let temp=array[i];

@@ -17,7 +17,7 @@ for(let i=0;i<array.length-1;i++){
         }
     }
 }
-return animations;
+return [animations,array];
 }
 // 3 4 2 1 5 6
 //{0,3}{1,4}

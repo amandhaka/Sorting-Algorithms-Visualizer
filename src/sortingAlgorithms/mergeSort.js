@@ -4,7 +4,7 @@ export function mergeSort(array){
     if(array.length<=1) return array;
     const auxiliaryArray=array.slice();
     mergeSortHelper(0,array.length-1,auxiliaryArray,helper,animations);
-    return animations;
+    return [animations,auxiliaryArray];
 }
 function mergeSortHelper(
     startIdx,

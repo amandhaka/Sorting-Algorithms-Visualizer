@@ -2,7 +2,7 @@ export function quickSort(array){
     let animations=[];
     let auxiliary=array.slice();
     quickSortHelper(auxiliary,0,auxiliary.length-1,animations);
-    return animations;
+    return [animations,auxiliary];
 }
 function quickSortHelper(auxiliary,startIndex,endIndex,animations)
 {

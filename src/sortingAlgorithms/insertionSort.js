@@ -18,5 +18,5 @@ export function insertionSort(array){
         animations.push(["overwrite",j+1,key]);
         array[j+1]=key;
     }
-    return animations;
+    return [animations,array];
 }
