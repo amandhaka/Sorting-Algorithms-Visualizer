@@ -76,7 +76,6 @@ class SortingVisualizer extends Component {
         // const jsorted=this.state.array.sort(function(a,b){return a-b});
         // console.log(arrayAreEqual(sorted,jsorted));
         const [animations,array]=mergeSort(this.state.array);
-        //console.log(animations);
          for(let i=0;i<animations.length;i++){
              const arrayBars= document.getElementsByClassName('array-bar');
              const colorChange=i%3!==2;
