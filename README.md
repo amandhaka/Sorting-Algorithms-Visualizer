@@ -8,9 +8,14 @@ This is a **Sorting Algorithms Visualizer**. I built this using reactjs. Here, Y
 5. *Bubble Sort* 
 
 You can see how all these algorithms really work and sort an array.
+
+You can check out the app here [Sorting Algorithm Visualizer](https://amandhaka.github.io/Sorting-Algorithms-Visualizer/)
+
 Also, Thanks to @clementmishailescu for this amazing idea.
 
-Stuff after this line is added by github by default.Thanks.
+![Demo](Sorting.gif)
+
+Stuff after this line is added by Create React App by default.Thanks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
