@@ -208,7 +208,7 @@ function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 // Testing the algorithms
-function arrayAreEqual(sorted,jsorted){
+/*function arrayAreEqual(sorted,jsorted){
     if(sorted.length!==jsorted.length){
         return false;
     };
@@ -222,5 +222,6 @@ function arrayAreEqual(sorted,jsorted){
     }
     return true;
 } 
+*/
  
 export default SortingVisualizer;
