@@ -5,6 +5,7 @@ import {bubbleSort} from './sortingAlgorithms/bubbleSort';
 import {quickSort} from './sortingAlgorithms/quickSort';
 import {insertionSort} from './sortingAlgorithms/insertionSort';
 import {selectionSort} from './sortingAlgorithms/selectionSort';
+import {heapSort} from  './sortingAlgorithms/heapSort';
 class SortingVisualizer extends Component {
     constructor(){
         super();
@@ -31,6 +32,7 @@ class SortingVisualizer extends Component {
         document.getElementById("insertionSort").disabled=true;
         document.getElementById("mergeSort").disabled=true;
         document.getElementById("quickSort").disabled=true;
+        document.getElementById("heapSort").disabled=true;
      }
      restoreButtons(){
         document.getElementById("generateArray").disabled=false;
@@ -38,7 +40,8 @@ class SortingVisualizer extends Component {
         document.getElementById("selectionSort").disabled=false;
         document.getElementById("insertionSort").disabled=false;
         document.getElementById("mergeSort").disabled=false;
-        document.getElementById("quickSort").disabled=false; 
+        document.getElementById("quickSort").disabled=false;
+        document.getElementById("heapSort").disabled=false; 
      }
      selectionSort(){
          this.disableButtons();
@@ -211,6 +214,40 @@ class SortingVisualizer extends Component {
             this.setState({array:array})
         },timeout+100);
      }
+     heapSort(){
+        // const arr= heapSort(this.state.array);
+        // const jsorted=this.state.array.sort(function(a,b){return a-b});
+        // console.log(arrayAreEqual(arr,jsorted));
+        this.disableButtons();
+        const [animations,array]=heapSort(this.state.array);
+        console.log(animations);
+        for(let i=0;i<animations.length;i++){
+            const colorChange=(animations[i][0]==="compare1" || animations[i][0]==="compare2");
+            const arrayBars=document.getElementsByClassName('array-bar');
+            if(colorChange){
+                const[temp,barOne,barTwo]=animations[i];
+                const color=(temp==="compare1")?'red':'#3498DB';
+                setTimeout(()=>{
+                    const barOneStyle=arrayBars[barOne].style;
+                    const barTwoStyle=arrayBars[barTwo].style;
+                    barOneStyle.background=color;
+                    barTwoStyle.background=color;                     
+                },i*3.5)
+            }
+            else if(animations[i][0]==="swap" || animations[i][0]==="swapFinal"){
+                const[temp,barOne,newHeight]=animations[i];
+                 setTimeout(()=>{
+                    const barOneStyle=arrayBars[barOne].style;
+                    barOneStyle.height=newHeight+'px';
+                    if(temp==="swapFinal") barOneStyle.backgroundColor="#3a58f0";
+                 },i*3.5);
+            }
+        }
+        setTimeout(()=>{
+            this.restoreButtons();
+            this.setState({array:array});
+        },animations.length*3.5)
+     }
     render() {
         const {array,bgColor}=this.state;
         let styles={
@@ -258,6 +295,10 @@ class SortingVisualizer extends Component {
                 <button id="selectionSort" 
                 className="btn btn-info m-2 animated slideInLeft delay 0s" 
                 style={{borderRadius:'30px'}} onClick={()=>this.selectionSort()} >Selection Sort</button>
+
+                <button id="heapSort" 
+                className="btn btn-info m-2 animated slideInLeft delay 0s" 
+                style={{borderRadius:'30px'}} onClick={()=>this.heapSort()} >Heap Sort</button>
                 </div>
             </div>
          );
@@ -269,7 +310,7 @@ function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 // Testing the algorithms
-/*function arrayAreEqual(sorted,jsorted){
+function arrayAreEqual(sorted,jsorted){
     if(sorted.length!==jsorted.length){
         return false;
     };
@@ -283,6 +324,5 @@ function randomIntFromInterval(min,max){
     }
     return true;
 } 
-*/
  
 export default SortingVisualizer;
