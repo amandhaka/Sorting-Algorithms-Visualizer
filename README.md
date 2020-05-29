@@ -5,7 +5,8 @@ This is a **Sorting Algorithms Visualizer**. I built this using reactjs. Here, Y
 2. *Quick Sort*
 3. *Insertion Sort*
 4. *Selection Sort*
-5. *Bubble Sort* 
+5. *Bubble Sort*
+6. *Heap Sort*
 
 You can see how all these algorithms really work and sort an array.
 
