@@ -29,7 +29,7 @@ class PopUp extends Component {
                         This is a Sorting Algorithms Visualizer built using reactjs.
                         You can see how some of the most famous sorting algorithms work
                         i.e.<br></br>
-                        <code>Bubble Sort, Merge Sort, Insertion Sort, Quick Sort, Selection Sort</code><br></br>
+                        <code>Bubble Sort, Merge Sort, Insertion Sort, Quick Sort, Selection Sort, Heap Sort</code><br></br>
                         You can generate new array using "Generate New Array" button everytime and choose your sorting algorithm
                         to sort the bars and see how it is done.
                     </ModalBody>
